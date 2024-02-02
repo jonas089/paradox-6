@@ -1,0 +1,18 @@
+[package]
+name = "mock_client"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+reqwest = { version = "0.11.2", features = ["blocking", "json"] }
+rocket = "0.4.11"
+serde_json = "1.0.107"
+zk-node = { path = "../zk-node" }
+ark-crypto-primitives = { version = "=0.4.0" }
+ark-ec = { version= "= 0.4.1", default-features = false }
+ark-circom = { git = "https://github.com/jonas089/circom-compat" }
+ark-bls12-377 = "0.4.0"
+ark-groth16 = { version = "=0.4.0", default-features = false, features = ["parallel"] }
+rand = { version = "0.8", default-features = false, features = ["std_rng"]}
+num-bigint = "0.4.3"
+ark-serialize = { version = "0.4", features = ["derive"] }
